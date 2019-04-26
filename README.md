@@ -18,7 +18,7 @@ Given the current disposition of pieces on a chess board, indicate whether or no
 
 ## General instructions
 
-* Install dependencies and running tests
+Install dependencies and running tests
 
 ```(bash)
   yarn
