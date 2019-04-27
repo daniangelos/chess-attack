@@ -40,3 +40,16 @@ or, for npm users
   npm install
   npm test
 ```
+
+## Feedback First Round
+
+### Pontos positivos
+
+* linguagem não apresentou barreira
+* todo mundo conseguiu contribuir
+
+### Pontos negativos
+
+* unused variable error
+* o teste demora pra rodar, deixar um watch
+* git push force na master
