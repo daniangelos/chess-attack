@@ -23,5 +23,42 @@ describe('Piece can attack', () => {
 
   })
 
+  it('Queen can attack in line', () => {
+    const chessBoard = new ChessBoard()
+    const queen = new Queen(2, 3, 'black')
+    chessBoard.addPiece(queen)
+    const queen2 = new Queen(2, 4, 'white')
+    chessBoard.addPiece(queen2)
+
+    console.log(chessBoard.toString())
+    expect(queen.canAttack(queen2, chessBoard.board)).toBe(true)
+
+  })
+
+  it('Queen can attack in column', () => {
+    const chessBoard = new ChessBoard()
+    const queen = new Queen(3, 3, 'black')
+    chessBoard.addPiece(queen)
+    const queen2 = new Queen(2, 3, 'white')
+    chessBoard.addPiece(queen2)
+
+
+    console.log(chessBoard.toString())
+    expect(queen.canAttack(queen2, chessBoard.board)).toBe(true)
+
+  })
+
+  it('Queen can attack in diagonal', () => {
+    const chessBoard = new ChessBoard()
+    const queen = new Queen(3, 3, 'black')
+    chessBoard.addPiece(queen)
+    const queen2 = new Queen(2, 2, 'white')
+    chessBoard.addPiece(queen2)
+
+
+    console.log(chessBoard.toString())
+    expect(queen.canAttack(queen2, chessBoard.board)).toBe(true)
+
+  })
 
 })

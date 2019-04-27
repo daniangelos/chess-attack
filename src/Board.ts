@@ -15,6 +15,8 @@ class ChessBoard {
     }
   }
 
+
+
   addPiece(newPiece: Piece) {
     this.pieces.push(newPiece)
     this.board[newPiece.line][newPiece.column] = this.pieces.length - 1
