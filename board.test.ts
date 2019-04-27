@@ -3,6 +3,8 @@ import Queen from "./src/Queen"
 import Knight from "./src/Knight"
 import Bishop from './src/Bishop'
 import Rook from './src/Rook'
+import Pawn from "./src/Pawn";
+import King from "./src/King";
 
 describe('Board', () => {
   it('renders board with queen', () => {
@@ -147,5 +149,39 @@ describe('Rook', () => {
     chessBoard.addPiece(rook)
     console.log(chessBoard.toString())
     expect(rook.canAttack(queen, chessBoard.board)).toBe(true)
+  })
+})
+
+describe('Pawn', () => {
+  it('can attack a queen at right diagonal', () => {
+    const queen = new Queen(5, 4, 'black')
+    const pawn = new Pawn(6, 5, 'white')
+    const chessBoard = new ChessBoard()
+    chessBoard.addPiece(queen)
+    chessBoard.addPiece(pawn)
+    console.log(chessBoard.toString())
+    expect(pawn.canAttack(queen, chessBoard.board)).toBe(true)
+  })
+
+  it('can attack a queen at right diagonal', () => {
+    const queen = new Queen(6, 5, 'white')
+    const pawn = new Pawn(5, 6, 'black')
+    const chessBoard = new ChessBoard()
+    chessBoard.addPiece(queen)
+    chessBoard.addPiece(pawn)
+    console.log(chessBoard.toString())
+    expect(pawn.canAttack(queen, chessBoard.board)).toBe(true)
+  })
+})
+
+describe('King', () => {
+  it('can attack a queen at right diagonal', () => {
+    const queen = new Queen(5, 4, 'black')
+    const king = new King(6, 5, 'white')
+    const chessBoard = new ChessBoard()
+    chessBoard.addPiece(queen)
+    chessBoard.addPiece(king)
+    console.log(chessBoard.toString())
+    expect(king.canAttack(queen, chessBoard.board)).toBe(true)
   })
 })

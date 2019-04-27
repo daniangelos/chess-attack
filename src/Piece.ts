@@ -10,6 +10,8 @@ abstract class Piece {
   }
 
   abstract canAttack(enemy: Piece, board: number[][]): boolean
+
+  abstract toString(): string
 }
 
 export default Piece
