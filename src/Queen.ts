@@ -5,11 +5,9 @@ class Queen extends Piece {
     return !!enemy
   }
 
-  toString() {
-    if (this.isWhite) {
-      return '♕'
-    }
-    return '♛'
+  toString(): string {
+    if (this.isWhite) return '\x1b[30m♕'
+    return '\x1b[30m♛'
   }
 }
 
