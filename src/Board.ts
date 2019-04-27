@@ -32,7 +32,7 @@ class ChessBoard {
         if (turn) { board += '\x1b[47m' }
         else { board += '\x1b[45m' }
         if (this.board[i][j] === -1) { board += '  ' }
-        else { board += this.pieces[this.board[i][j]].toString() + ' ' }
+        else { board += '\x1b[30m' + this.pieces[this.board[i][j]].toString() + ' ' }
         board += '\x1b[0m'
         turn = !turn
       }
