@@ -16,7 +16,7 @@ class ChessBoard {
   addPiece(newPiece: Piece) {
     this.pieces.push(newPiece)
     const idx = this.pieces.length - 1
-    this.board[newPiece.x][newPiece.y] = idx
+    this.board[newPiece.line][newPiece.column] = idx
   }
 
   atPosition(x: number, y: number) {

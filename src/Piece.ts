@@ -1,15 +1,15 @@
 abstract class Piece {
-  x: number
-  y: number
-  isWhite: boolean
+  line: number
+  column: number
+  color: string
 
-  constructor(x: number, y: number, color: string) {
-    this.x = x
-    this.y = y
-    this.isWhite = color === 'white'
+  constructor(line: number, column: number, color: string) {
+    this.line = line
+    this.column = column
+    this.color = color
   }
 
-  abstract canAttack(enemy: Piece): boolean
+  abstract canAttack(enemy: Piece, board: number[][]): boolean
 }
 
 export default Piece

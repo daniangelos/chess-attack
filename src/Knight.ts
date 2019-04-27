@@ -2,27 +2,25 @@ import Piece from "./Piece";
 
 class Knight extends Piece {
   canAttack(enemy: Piece): boolean {
+    if (this.color === enemy.color) return false
     const delta = [[1, 2], [1, -2], [-1, 2], [-1, -2],
     [2, 1], [2, -1], [-2, 1], [-2, -1]]
 
     let reachable = false
 
     delta.forEach(d => {
-      const newX = this.x + d[0]
-      const newY = this.y + d[1]
+      const newLine = this.line + d[0]
+      const newColumn = this.column + d[1]
 
-      if (newX >= 0 && newX < 8 && newY >= 0 && newY < 8
-        && enemy.x === newX && enemy.y === newY)
+      if (newLine >= 0 && newLine < 8 && newColumn >= 0 && newColumn < 8
+        && enemy.line === newLine && enemy.column === newColumn)
         reachable = true
     })
-    return (
-      this.isWhite !== enemy.isWhite
-      && reachable
-    )
+    return reachable
   }
 
   toString(): string {
-    if (this.isWhite) return '♘'
+    if (this.color === 'white') return '♘'
     return '♞'
   }
 }
