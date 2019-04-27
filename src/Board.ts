@@ -15,6 +15,19 @@ class ChessBoard {
     }
   }
 
+  addPiece(newPiece: Piece) {
+    this.pieces.push(newPiece)
+    this.board[newPiece.line][newPiece.column] = this.pieces.length - 1
+  }
+
+  atPosition(line: number, column: number): Piece {
+    const idx = this.board[line][column]
+    if (idx == -1) {
+      return null
+    }
+    return this.pieces[idx]
+  }
+
   toString(): string {
     let board = ''
     let turn = false
