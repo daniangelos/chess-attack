@@ -2,6 +2,7 @@ import ChessBoard from "./src/Board"
 import Queen from "./src/Queen"
 import Knight from "./src/Knight"
 import Bishop from './src/Bishop'
+import Rook from './src/Rook'
 
 describe('Board', () => {
   it('renders board with queen', () => {
@@ -134,5 +135,17 @@ describe('Bishop', () => {
     chessBoard.addPiece(bishop)
     console.log(chessBoard.toString())
     expect(bishop.canAttack(queen, chessBoard.board)).toBe(true)
+  })
+})
+
+describe('Rook', () => {
+  it('can attack a queen at same column', () => {
+    const queen = new Queen(1, 5, 'white')
+    const rook = new Rook(4, 5, 'black')
+    const chessBoard = new ChessBoard()
+    chessBoard.addPiece(queen)
+    chessBoard.addPiece(rook)
+    console.log(chessBoard.toString())
+    expect(rook.canAttack(queen, chessBoard.board)).toBe(true)
   })
 })
