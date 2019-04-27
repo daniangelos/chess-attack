@@ -4,17 +4,26 @@ This is a challenge proposed by me for the Coding Day 2019. The purpose is to de
 
 ## Checkpoints
 
+### Add a piece to the board
+
+Given a chess board, I am supposed to be able to add a piece at a determined position. 
+
 ### Queen attack
 
-Given the positions of two queens on a chess board, indicate whether or not they are positioned so that they can attack each other.
+Given the positions of two queens on a chess board, indicate whether or not a queen can attack the other if:
+* they share a line
+* they share a column
+* they share a diagonal
 
 ### General attack
 
-Given the positions of any two pieces on a chess board, say if a piece is able to attack the other.
+Repeat the functionality to the remaining pieces of a chess game:
+* Knight
+* Bishop
+* Rook
+* Pawn
+* King
 
-### Check
-
-Given the current disposition of pieces on a chess board, indicate whether or not a determined king is in check.
 
 ## General instructions
 
