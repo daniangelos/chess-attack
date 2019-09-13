@@ -2,11 +2,16 @@ abstract class Piece {
   line: number
   column: number
   color: string
+  symbol: string
 
-  constructor(line: number, column: number, color: string) {
+  constructor(color: string, symbol: string) {
+    this.color = color
+    this.symbol = symbol
+  }
+
+  setPosition(line: number, column: number) {
     this.line = line
     this.column = column
-    this.color = color
   }
 
   abstract canAttack(enemy: Piece, board: number[][]): boolean
