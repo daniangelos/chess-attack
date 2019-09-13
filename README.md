@@ -11,6 +11,7 @@ Given a chess board, I am supposed to be able to add a piece at a determined pos
 ### Queen attack
 
 Given the positions of two queens on a chess board, indicate whether or not a queen can attack the other if:
+* they are enemies
 * they share a line
 * they share a column
 * they share a diagonal
