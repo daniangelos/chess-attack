@@ -10,8 +10,8 @@ abstract class Piece {
   }
 
   setPosition(line: number, column: number) {
-    this.line = line - 1
-    this.column = column - 1
+    this.line = line
+    this.column = column
   }
 
   abstract canAttack(enemy: Piece, board: number[][]): boolean
