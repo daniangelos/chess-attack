@@ -15,6 +15,12 @@ class ChessBoard {
     }
   }
 
+  addPiece(piece: Piece, line: number, column: number) {
+    this.board[line][column] = this.pieces.length
+    this.pieces.push(piece)
+    piece.setPosition(line, column)
+  }
+
   toString(): string {
     let board = ''
     let turn = false
